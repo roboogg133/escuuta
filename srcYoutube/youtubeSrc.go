@@ -166,4 +166,10 @@ func GetThumbURL(url string) (string, error) {
 	return video.Thumbnails[0].URL, nil
 }
 
+func SearchVideos(query string) ([]string, error) {
+
+	http.Get("https://pipedapi.kavin.rocks/search?q=rickroll&filter=all")
+
+}
+
 // Marked as: Finished (by Robo)

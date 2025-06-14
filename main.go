@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	name, err := srcYoutube.GetTitle("https://www.youtube.com/watch?v=d5dj2XrkvQk")
+	name, err := srcYoutube.SearchVideos("https://www.youtube.com/watch?v=d5dj2XrkvQk")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
