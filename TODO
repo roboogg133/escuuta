@@ -1,0 +1,5 @@
+search for videos, APIs:
+
+https://pipedapi.kavin.rocks/search?q=rickroll&filter=all
+https://invidious.snopyta.org/api/v1/search?q=rickroll
+https://tube.cadence.moe/api/search?q=rickroll
