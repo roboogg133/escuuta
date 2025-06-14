@@ -1,9 +1,18 @@
 package main
 
 import (
-	"escuuta/config"
+	"escuuta/srcYoutube"
+	"fmt"
 )
 
 func main() {
-	config.GetTitle("https://www.youtube.com/watch?v=d5dj2XrkvQk")
+
+	name, err := srcYoutube.GetTitle("https://www.youtube.com/watch?v=d5dj2XrkvQk")
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	fmt.Println("Title:", name)
+
 }

@@ -3,6 +3,7 @@ module escuuta
 go 1.24.4
 
 require (
+	gioui.org v0.8.0 // indirect
 	github.com/bitly/go-simplejson v0.5.1 // indirect
 	github.com/dlclark/regexp2 v1.11.5 // indirect
 	github.com/dop251/goja v0.0.0-20250125213203-5ef83b82af17 // indirect

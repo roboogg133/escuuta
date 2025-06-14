@@ -1,3 +1,5 @@
+gioui.org v0.8.0 h1:QV5p5JvsmSmGiIXVYOKn6d9YDliTfjtLlVf5J+BZ9Pg=
+gioui.org v0.8.0/go.mod h1:vEMmpxMOd/iwJhXvGVIzWEbxMWhnMQ9aByOGQdlQ8rc=
 github.com/bitly/go-simplejson v0.5.1 h1:xgwPbetQScXt1gh9BmoJ6j9JMr3TElvuIyjR8pgdoow=
 github.com/bitly/go-simplejson v0.5.1/go.mod h1:YOPVLzCfwK14b4Sff3oP1AmGhI9T9Vsg84etUnlyp+Q=
 github.com/dlclark/regexp2 v1.11.5 h1:Q/sSnsKerHeCkc/jSTNq1oCm7KiVgUMZRDUoRu0JQZQ=
