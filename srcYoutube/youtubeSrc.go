@@ -10,6 +10,18 @@ import (
 	"github.com/kkdai/youtube/v2"
 )
 
+type VideoStruct struct {
+	Title     string `json:"title"`
+	Url       string `json:"url"`
+	Thumbnail string `json:"thumbnail"`
+	Channel   string `json:"uploaderName"`
+	Duration  string `json:"duration"`
+}
+
+type Response struct {
+	Items []VideoStruct `json:"items"`
+}
+
 type headerRoundTripper struct {
 	rt      http.RoundTripper
 	headers map[string]string
@@ -166,10 +178,28 @@ func GetThumbURL(url string) (string, error) {
 	return video.Thumbnails[0].URL, nil
 }
 
-func SearchVideos(query string) ([]string, error) {
+func SearchVideos(query string) ([]VideoStruct, error) {
 
-	http.Get("https://pipedapi.kavin.rocks/search?q=rickroll&filter=all")
+	var response Response
 
+	res, err := http.Get("https://pipedapi.kavin.rocks/search?q=rickroll&filter=all")
+	if err != nil {
+		return nil, err
+	}
+
+	if res.StatusCode != 200 {
+
+		res, err = http.Get("https://pipedapi.kavin.rocks/search?q=rickroll&filter=all")
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	jsonByte, _ := io.ReadAll(res.Body)
+
+	json.Unmarshal(jsonByte, &response)
+
+	return response.Items, nil
 }
 
 // Marked as: Finished (by Robo)
