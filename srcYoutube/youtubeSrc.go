@@ -82,9 +82,9 @@ func CheckVisitor(config string) string {
 	return v.Visitor
 }
 
-func Download(link string, path string) error {
+func Download(configPath string, link string, path string) error {
 
-	visitorc := CheckVisitor("config.json")
+	visitorc := CheckVisitor(configPath)
 
 	customTransport := &headerRoundTripper{
 		rt: http.DefaultTransport,
